@@ -1,1 +1,15 @@
-
+import tkinter
+from tkinter import *
+f = open("accounts.txt")
+root = Tk()
+Label(root, text='Username:').grid(row=0, padx=(10, 10))
+Label(root, text='Password:').grid(row=1, padx=(10, 10))
+e1 = Entry(root)
+e2 = Entry(root, show="*")
+e1.grid(row=0, column=1, padx=10, pady=10)
+e2.grid(row=1, column=1, padx=10, pady=10)
+button = tkinter.Button(root, text="New User", width=25)
+button.grid(row=2, padx=10, pady=10, columnspan=3)
+button = tkinter.Button(root, text="Reset Password", width=25)
+button.grid(row=3, padx=10, pady=10, columnspan=3)
+mainloop()
